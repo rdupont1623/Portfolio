@@ -1,5 +1,9 @@
 # Project #02 Portfolio 
 
+Link to GitHub Repository: https://github.com/rdupont1623/Portfolio.git
+
+
+
 The goal of this project was to create a Portfolio page that functionally resembled a portfolio provided to us by our instructors. This project was a LOT more challenging than than assignment 1, I spent a ton of time getting to better know flex and its many properties. I enjoyed getting to see how you can add life to your page by putting in interactive elements, like the navigation bar and the project titles. 
 
 
