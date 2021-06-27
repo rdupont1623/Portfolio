@@ -1,0 +1,177 @@
+/*Custom Colors*/
+:root {
+  --white: #ffffff;
+  --grey: #a6a6a6;
+  --Nav:#339933;
+  --Hero: #45567d;
+}
+
+/*Box Sizing and Reset of Margins*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+/*Font size being set to 62.5% for easy rem calculation - 62.5% = 10px = 1rem*/
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/*Media Querry Control- using rem so that scaling is more uniform*/
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px / 16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+
+/*Actual Styling Begins! --- First some groundwork is established*/
+
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight:400;
+  line-height:1.4;
+  color: var(--white);
+}
+
+h1, 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size:4.2rem;
+}
+ul {
+  list-style:none;
+}
+
+a {
+  color: var(--white)
+}
+
+img {
+  min-height: 300px;
+  max-height:300px;
+  min-width:300px;
+  display: block;
+  width: 100%;
+}
+
+/*Lets get into some particulars now, beginning with the Navigation Bar*/
+
+.nav {
+  display:flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  background: var(--Nav);
+}
+.nav-list {
+  display:flex;
+  margin-right: 4rem;
+  margin: 0 1rem;
+}
+.nav-list a {
+  display:block;
+  font-size:2.2rem;
+  padding: 1.5rem;
+}
+
+.nav-list a:hover {
+  background: silver;
+}
+
+/*Styling for the Intro and Bio Section*/
+
+.intro-section {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Hero);
+  background-image:linear-gradient(#e66465, #9198e5)
+}
+
+.intro-section > p {
+  font-size:3rem;
+  font-weight:200;
+  font-style:italic;
+  color: var(--Nav)
+}
+
+/* Now we begin the Project links- starting General Styling and then the header*/
+
+.projects-section {
+  text-align:center;
+  padding: 10rem 2rem;
+  background: var(--Hero);
+}
+
+.projects-header {
+  max-width: 800px;
+  margin: 0 auto 6rem auto;
+  border-bottom: .2rem solid var(--white);
+}
+
+/*I Had a really hard time getting the flex to work correctly, I ultimatley had to use Grid, which I finally managed to get working - I watched a lot of videos about flex and grid and I for sure need more practice with it*/
+
+.projects-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+/*Some styling now for the mini titles of the projects- I saw this way of using hover to make the titles look like code in a youtube video and thought it looked really cool*/
+
+.code {
+  color: var(--grey);
+  transition: color 0.3s ease-out;
+}
+
+.project-tile:hover .code{
+  color: #ff7f50;
+}
+
+.project-tile {
+  font-size: 2rem;
+}
+
+/* Finishing the Page off now with the Contact Section*/
+
+.contact-section {
+  background-image:linear-gradient(#9198e5,#e66465)
+}
+
